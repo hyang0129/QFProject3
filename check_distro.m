@@ -25,7 +25,7 @@ n = 10000;
 
 for i = 1:n
 %     x =  sample_truncated_normal(N,sig,mu);
-    [x, nameStr] = distro(N, sig, mu) ;
+    [x, nameStr, mu] = distro(N) ;
     
     [a b] = ci(x, func);
     
