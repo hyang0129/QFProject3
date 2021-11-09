@@ -4,13 +4,13 @@ values = {};
 func = 1;
 Ns = [10, 30, 100, 300, 1000];
 
-distros ={@sample_truncated_normal, @sample_bernoulli, @sample_uniform}; 
+distros ={@sample_truncated_normal, @sample_bernoulli, @sample_uniform, @sample_bernoulli_00, @sample_bernoulli_10}; 
 
 
-for dist=1:3;
+for dist=1:5;
 
     for func=1:10;
-
+        func 
         for i=1:5;
             i
 
