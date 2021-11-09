@@ -2,16 +2,17 @@
 
 values = {};
 func = 1;
-Ns = [10, 30, 100, 300, 1000];
+Ns = [10, 30, 100, 300];
 
-distros ={@sample_truncated_normal, @sample_bernoulli, @sample_uniform, @sample_bernoulli_00, @sample_bernoulli_10}; 
+distros ={@sample_truncated_normal, @sample_bernoulli, @sample_uniform, ...
+    @sample_bernoulli_00, @sample_bernoulli_10, @sample_beta}; 
 
 
 for dist=1:5;
 
     for func=1:10;
         func 
-        for i=1:5;
+        for i=1:3;
             i
 
             [correct, fn_vs_cipct, fn_vs_cit, nameStr]  =check_distro(Ns(i), func, distros{1, dist});
