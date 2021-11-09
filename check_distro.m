@@ -33,8 +33,11 @@ for i = 1:n
     
 %     CIPCT = CIFcnPCT(x,95) ;
     if i <= 100
+        [x, nameStr, mu] = distro(N) ;
         CIPCT = bootci(100, @mean, x);
     end 
+    
+    [x, nameStr, mu] = distro(N) ;
     CIT = CIFcn(x, 95) ;
     
     if mu >= a & mu <=  b;
